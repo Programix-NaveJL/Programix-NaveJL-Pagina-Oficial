@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Programix NaveJL</title>
-  <link rel="icon" href="favicon.png" sizes="32x32">
-  <link rel="icon" href="favicon.png" sizes="16x16">
+  <link rel="icon" href="favicon.png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
 
   <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Favicon (opcional) -->
-  <!-- <link rel="icon" href="img/favicon.png"> -->
+  <!-- Iconos de tecnologías (Devicon) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
 
@@ -27,7 +26,10 @@
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#nosotros">Nosotros</a>
+      <a href="#equipo">Equipo</a>
       <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#stack">Stack</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
@@ -36,7 +38,7 @@
   <section class="hero" id="inicio">
     <img src="logo_programix_navejl.png" alt="Programix NaveJL" class="hero-logo">
 
-    <h2>Soluciones digitales que impulsan tu negocio</h2>
+    <h1>Soluciones digitales que impulsan tu negocio</h1>
     <p>Desarrollo de software moderno, eficiente y a la medida</p>
 
     <a href="#contacto" class="btn">Contáctanos</a>
@@ -50,6 +52,26 @@
       enfocados en crear soluciones tecnológicas innovadoras, seguras y escalables.
       Transformamos ideas en software funcional que impulsa negocios.
     </p>
+  </section>
+
+  <!-- EQUIPO / ORGANIGRAMA -->
+  <section class="section team" id="equipo">
+    <h2>Nuestro Equipo</h2>
+
+    <div class="orgchart">
+      <div class="org-node company">Programix NaveJL</div>
+      <div class="org-line"></div>
+      <div class="org-branch">
+        <div class="org-node">
+          <span class="role">Fundador</span>
+          <strong>José Alfredo Navejú</strong>
+        </div>
+        <div class="org-node">
+          <span class="role">Co-Fundador</span>
+          <strong>Isidro Yael Ascencio</strong>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- SERVICIOS -->
@@ -74,43 +96,93 @@
     </div>
   </section>
 
+  <!-- PROYECTOS -->
+  <section class="section projects" id="proyectos">
+    <h2>Proyectos en Desarrollo</h2>
+    <p class="text">Sistemas propios que estamos construyendo actualmente</p>
+
+    <div class="cards">
+      <div class="card project-card">
+        <span class="badge">🚧 En desarrollo</span>
+        <img src="https://programix-navejl.github.io/comunidad-itvh/imagenes/logo_comunidad_itvh.png" alt="Icono del proyecto" class="project-icon">
+        <div class="project-title">
+          <img src="aspirantes_itvh_appbar.png" alt="Aspirantes ITVH">
+        </div>
+        <p>Plataforma para aspirantes del Instituto Tecnológico de Villahermosa.</p>
+        <a href="https://programix-navejl.github.io/ASPIRANTES_ITVH/aspirantes_itvh_app.html" target="_blank" rel="noopener noreferrer" class="btn small">Ver proyecto</a>
+      </div>
+
+      <div class="card project-card">
+        <span class="badge">🚧 En desarrollo</span>
+        <img src="https://programix-navejl.github.io/comunidad-itvh/imagenes/logo_comunidad_itvh.png" alt="Icono del proyecto" class="project-icon">
+        <div class="project-title">
+          <img src="comunidad_itvh_appbar.png" alt="Comunidad ITVH">
+        </div>
+        <p>Espacio digital para conectar a la comunidad estudiantil del ITVH.</p>
+        <a href="https://programix-navejl.github.io/comunidad-itvh/comunidad_itvh_app.html" target="_blank" rel="noopener noreferrer" class="btn small">Ver proyecto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK TECNOLÓGICO -->
+  <section class="section stack" id="stack">
+    <h2>Stack Tecnológico</h2>
+    <p class="text">Herramientas y tecnologías que dominamos</p>
+
+    <div class="tech-grid">
+      <div class="tech-item"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
+      <div class="tech-item"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
+      <div class="tech-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+      <div class="tech-item"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+      <div class="tech-item"><i class="devicon-flutter-plain colored"></i><span>Flutter</span></div>
+      <div class="tech-item"><i class="devicon-kotlin-plain colored"></i><span>Kotlin</span></div>
+      <div class="tech-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+      <div class="tech-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+      <div class="tech-item"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></div>
+      <div class="tech-item"><i class="devicon-supabase-plain colored"></i><span>Supabase</span></div>
+      <div class="tech-item"><i class="devicon-androidstudio-plain colored"></i><span>Android Studio</span></div>
+      <div class="tech-item"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+      <div class="tech-item"><i class="devicon-intellij-plain colored"></i><span>IntelliJ IDEA</span></div>
+      <div class="tech-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+      <div class="tech-item"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+    </div>
+  </section>
+
   <!-- CONTACTO -->
-<section class="section contact" id="contacto">
-  <h2>Contacto</h2>
-  <p>¿Tienes un proyecto en mente? Contáctanos directamente</p>
+  <section class="section contact" id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes un proyecto en mente? Contáctanos directamente</p>
 
-  <div class="contact-methods">
+    <div class="contact-methods">
 
-    <!-- WhatsApp -->
-    <a 
-      href="https://wa.me/9841435822?text=Hola%20Programix%20NaveJL,%20me%20gustaría%20información%20sobre%20un%20proyecto"
-      target="_blank"
-      class="btn whatsapp"
-    >
-      📲 Contáctanos por WhatsApp
-    </a>
-
-    <!-- Correo visible -->
-    <p class="email">
-      📧 <a href="mailto:alfredo.naveju.lop@gmail.com">
-        alfredo.naveju.lop@gmail.com
+      <!-- WhatsApp -->
+      <a
+        href="https://wa.me/9841435822?text=Hola%20Programix%20NaveJL,%20me%20gustaría%20información%20sobre%20un%20proyecto"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn whatsapp"
+      >
+        📲 Contáctanos por WhatsApp
       </a>
-    </p>
 
-  </div>
-</section>
+      <!-- Correo -->
+      <a
+        href="mailto:alfredo.naveju.lop@gmail.com"
+        class="btn email-btn"
+      >
+        📧 Escríbenos por correo
+      </a>
 
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer>
     <p>© 2026 Programix NaveJL | Todos los derechos reservados</p>
+    <a href="https://github.com/programix-navejl" target="_blank" rel="noopener noreferrer" class="footer-github">
+      <i class="devicon-github-original colored"></i> GitHub
+    </a>
   </footer>
 
 </body>
 </html>
-
-
-
-
-
-
