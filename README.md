@@ -54,8 +54,16 @@
 
 ---
 
-### 🚀 Proyectos Destacados
+### 📂 Sobre este Repositorio (Portafolio Fuente)
 
-*   **🌐 Ecosistema Comunidad ITVH:** Plataforma digital modular e independiente diseñada específicamente para integrar y potenciar la interacción de la comunidad estudiantil del TecNM Campus Villahermosa.
-*   **📱 Aspirantes ITVH:** Solución multiplataforma orientada a la gestión y acompañamiento integral de nuevos aspirantes en su transición e ingreso a la educación superior.
-*   **🎶 Liturgia con Naveju:** Herramientas web dedicadas a la organización ágil de contenidos, estructuración de cronogramas y optimización de flujos de trabajo específicos.
+Este espacio almacena adicionalmente el código fuente de mi **Sitio Web de Presentación Profesional**, desplegado de manera estática a través de GitHub Pages:
+
+*   `index.html`: Estructura semántica del portafolio.
+*   `style.css`: Arquitectura visual, diseño responsivo e identidad gráfica de la marca.
+*   `assets / *.png`: Recursos gráficos integrados en los flujos de documentación de los ecosistemas **Comunidad ITVH** y **Aspirantes ITVH** [cite: Ongoing discussion regarding the implementation of features like a marketplace, campus mapping (UbicaTecNM), and messaging systems, utilizing an institutional oratory style for the launch strategy script narratives. Date: 2026-06 to 2026-07., Explicit discussion of a multi-platform deployment strategy and a specific data management timeline for new student admissions. Date: 2026-07.].
+
+---
+
+<p align="center">
+  <sub>Diseñado con enfoque profesional por <strong>Programix NaveJL</strong> © 2026</sub>
+</p>
