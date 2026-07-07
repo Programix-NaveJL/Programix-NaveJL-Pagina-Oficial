@@ -247,6 +247,32 @@ section[id] {
   font-size: 0.9rem;
 }
 
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.badge-row .badge {
+  margin-bottom: 0;
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.project-header .project-icon {
+  margin-bottom: 0;
+}
+
+.project-header .project-title {
+  margin-bottom: 0;
+}
+
 /* STACK TECNOLÓGICO */
 .tech-grid {
   display: grid;
