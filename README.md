@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://programix-navejl.github.io/programix-navejl/logo_programix_navejl.png" alt="Logo Programix NaveJL" width="150px">
+  <img src="https://programix-navejl.github.io/Programix-NaveJL-Pagina-Oficial/logo_programix_navejl.png" alt="Logo Programix NaveJL" width="150px">
 </p>
 
 <h1 align="center">¡Hola! Soy José Alfredo Navejú López 👋</h1>
