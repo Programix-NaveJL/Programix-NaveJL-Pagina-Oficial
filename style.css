@@ -134,10 +134,10 @@ section[id] {
 
 .org-branch {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 40px;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
 }
 
 .org-branch .org-node {
@@ -399,15 +399,29 @@ footer {
   }
 
   .org-branch {
+    display: flex;
     flex-direction: column;
     gap: 30px;
+    align-items: center;
   }
 
-  .org-branch::before {
-    display: none;
+  .org-branch .org-node {
+    position: relative;
+    width: 100%;
   }
 
   .org-branch .org-node::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 30px;
+    background: #38bdf8;
+  }
+
+  .org-branch .org-node:first-child::before {
     display: none;
   }
 }
