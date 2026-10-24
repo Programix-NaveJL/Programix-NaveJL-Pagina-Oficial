@@ -1,0 +1,658 @@
+/* =========================================================
+   Programix NaveJL · hoja de estilos de index.html
+
+   Diseño tomado del borrador original: tipografía Poppins,
+   fondo azul pizarra, tarjetas casi negras y acento azul cielo.
+
+   Orden del archivo:
+   1. Variables y base
+   2. Barra de navegación
+   3. Botones
+   4. Portada
+   5. Secciones y títulos
+   6. Nosotros + organigrama
+   7. Proyectos
+   8. Stack tecnológico
+   9. Contacto
+   10. Pie de página
+   11. Adaptación a pantallas pequeñas
+   12. Movimiento reducido
+   ========================================================= */
+
+
+/* ---------- 1. Variables y base ---------- */
+:root {
+  --fondo: #0f172a;        /* fondo general de la página */
+  --tarjeta: #020617;      /* barra, tarjetas y pie */
+  --acento: #38bdf8;       /* azul cielo: títulos, líneas y botones */
+  --texto: #e5e7eb;
+  --texto-suave: #94a3b8;
+  --sombra-acento: rgba(56, 189, 248, 0.2);
+  --itvh: #2f9e63;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+/* Compensa la barra fija al saltar a una sección */
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.envoltura {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 8%;
+}
+
+
+/* ---------- 2. Barra de navegación ----------
+   Fija arriba; logo a la izquierda y enlaces a la derecha.
+   En pantallas angostas los enlaces se pliegan en un menú. */
+.cabecera {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--tarjeta);
+}
+
+.cabecera .envoltura {
+  max-width: none;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.marca img {
+  height: 60px;
+  width: auto;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.menu a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--texto);
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: var(--acento);
+}
+
+.abrir-menu {
+  display: none;
+  background: none;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  color: var(--texto);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+
+/* ---------- 3. Botones ---------- */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 30px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--acento);
+  color: var(--tarjeta);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover {
+  opacity: 0.9;
+}
+
+.boton.whatsapp {
+  background: #25d366;
+  color: #ffffff;
+}
+
+.boton.chico {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+.boton svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  flex: none;
+}
+
+
+/* ---------- 4. Portada ----------
+   Pantalla completa, todo centrado: logo, título, frase y botón. */
+.portada {
+  min-height: 100vh;
+  padding-top: 80px;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.portada .envoltura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portada .logo-portada {
+  width: 350px;
+  height: auto;
+  margin-bottom: 60px;
+  animation: aparecer 1.5s ease-in-out;
+}
+
+.portada h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.portada .eslogan {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ---------- 5. Secciones y títulos ---------- */
+.bloque {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.bloque h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: var(--acento);
+}
+
+.bloque .intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 44em;
+  margin: 0 auto;
+}
+
+
+/* ---------- 6. Nosotros + organigrama ----------
+   Mapa conceptual: nodo raíz, línea vertical, barra horizontal
+   y un conector por integrante, todo dibujado con pseudo-elementos.
+   En pantallas angostas pasa a una lista con línea guía lateral. */
+.organigrama {
+  --corte: 40px; /* alto de los conectores verticales */
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.org-raiz {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 30px;
+  border-radius: 12px;
+  background: var(--tarjeta);
+  color: var(--acento);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.org-raiz img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+/* Línea que baja desde la raíz hasta la barra horizontal */
+.org-raiz::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 2px;
+  height: var(--corte);
+  background: var(--acento);
+  transform: translateX(-50%);
+}
+
+.org-ramas {
+  list-style: none;
+  margin-top: var(--corte);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.org-ramas li {
+  position: relative;
+  padding-top: var(--corte);
+  display: flex;
+}
+
+/* Tramo horizontal de la barra (cubre media separación a cada lado) */
+.org-ramas li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -8px;
+  right: -8px;
+  height: 2px;
+  background: var(--acento);
+}
+
+.org-ramas li:first-child::before { left: 50%; }
+.org-ramas li:last-child::before  { right: 50%; }
+
+/* Conector vertical hacia la tarjeta de cada integrante */
+.org-ramas li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: var(--corte);
+  background: var(--acento);
+  transform: translateX(-50%);
+}
+
+.integrante {
+  flex: 1;
+  padding: 25px 18px;
+  border-radius: 15px;
+  background: var(--tarjeta);
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.integrante:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px var(--sombra-acento);
+}
+
+.integrante .puesto {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--acento);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.integrante strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.integrante .enfoque {
+  color: var(--texto-suave);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+
+/* ---------- 7. Proyectos ----------
+   Tarjetas con insignias arriba, icono + rótulo sobre cajita
+   blanca (los rótulos son negros) y botón al pie. */
+.proyectos {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.proyecto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  border-radius: 15px;
+  background: var(--tarjeta);
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proyecto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px var(--sombra-acento);
+}
+
+.insignias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.insignia {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--acento);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.insignia.suave {
+  background: rgba(148, 163, 184, 0.15);
+  color: var(--texto-suave);
+}
+
+.proyecto-cabecera {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.proyecto-icono {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.proyecto-nombre {
+  display: inline-block;
+  padding: 14px 18px;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.proyecto-nombre img {
+  height: 32px;
+  width: auto;
+}
+
+.proyecto p {
+  margin-bottom: 20px;
+}
+
+.proyecto .boton {
+  margin-top: auto;
+}
+
+/* Proyecto en proceso: toda la tarjeta en gris y sin animación al pasar el cursor */
+.proyecto.pendiente {
+  filter: grayscale(1);
+  opacity: 0.55;
+}
+
+.proyecto.pendiente:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* ---------- 8. Stack tecnológico ----------
+   Tres grupos de iconos (Devicon), centrados. */
+.stack-grupos {
+  margin-top: 40px;
+  display: grid;
+  gap: 40px;
+}
+
+.stack-grupo h3 {
+  margin-bottom: 18px;
+  color: var(--texto-suave);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.stack-lista {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.stack-lista li {
+  width: 124px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 10px;
+  border-radius: 12px;
+  background: var(--tarjeta);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stack-lista li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.15);
+}
+
+.stack-lista i {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.stack-lista span {
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+
+/* ---------- 9. Contacto ----------
+   Dos botones apilados y centrados: WhatsApp y correo. */
+.contacto-cuerpo .intro {
+  margin-bottom: 30px;
+}
+
+.contacto-cuerpo .acciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+
+/* ---------- 10. Pie de página ---------- */
+.pie {
+  padding: 20px;
+  background: var(--tarjeta);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.pie a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.pie a:hover {
+  color: var(--acento);
+}
+
+.pie a i {
+  font-size: 1.2rem;
+}
+
+
+/* ---------- 11. Adaptación a pantallas pequeñas ---------- */
+
+/* El organigrama deja de ser árbol horizontal y se vuelve una lista
+   vertical con línea guía a la izquierda. */
+@media (max-width: 1099px) {
+  .organigrama {
+    align-items: flex-start;
+  }
+
+  .org-raiz::after {
+    left: 23px;
+    transform: none;
+  }
+
+  .org-ramas {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-left: 23px;
+    padding-left: 28px;
+    width: calc(100% - 23px);
+    max-width: 560px;
+    border-left: 2px solid var(--acento);
+  }
+
+  .org-ramas li {
+    padding-top: 0;
+  }
+
+  /* Conector corto que une cada tarjeta con la línea guía */
+  .org-ramas li::before,
+  .org-ramas li:first-child::before,
+  .org-ramas li:last-child::before {
+    top: 36px;
+    left: -28px;
+    right: auto;
+    width: 28px;
+  }
+
+  .org-ramas li::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .cabecera .envoltura {
+    padding: 15px 25px;
+  }
+
+  .abrir-menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 8px 25px 16px;
+    background: var(--tarjeta);
+  }
+
+  .menu.abierto {
+    display: flex;
+  }
+
+  .menu a {
+    margin: 0;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  }
+
+  .envoltura {
+    padding: 0 8%;
+  }
+
+  .bloque {
+    padding: 80px 0;
+  }
+
+  .portada h1 {
+    font-size: 2rem;
+  }
+
+  .portada .logo-portada {
+    width: 220px;
+    margin-bottom: 40px;
+  }
+}
+
+
+/* ---------- 12. Movimiento reducido ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .portada .logo-portada {
+    animation: none;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
